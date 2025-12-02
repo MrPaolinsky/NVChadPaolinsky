@@ -21,4 +21,10 @@ M.base46 = {
 --      }
 -- }
 
+M.ui = {
+    statusline = {
+        separator_style = "block",
+    }
+}
+
 return M
