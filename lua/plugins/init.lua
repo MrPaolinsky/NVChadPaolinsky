@@ -1,28 +1,35 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform",
-  },
+    {
+        "stevearc/conform.nvim",
+        -- event = 'BufWritePre', -- uncomment for format on save
+        opts = require "configs.conform",
+    },
 
-  -- These are some examples, uncomment them if you want to see them work!
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
-  },
+    -- These are some examples, uncomment them if you want to see them work!
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            require "configs.lspconfig"
+        end,
+    },
+    {
+        "nosduco/remote-sshfs.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+        opts = {
+            -- Refer to the configuration section below
+            -- or leave empty for defaults
+        },
+    },
+    -- test new blink
+    -- { import = "nvchad.blink.lazyspec" },
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+    -- {
+    -- 	"nvim-treesitter/nvim-treesitter",
+    -- 	opts = {
+    -- 		ensure_installed = {
+    -- 			"vim", "lua", "vimdoc",
+    --      "html", "css"
+    -- 		},
+    -- 	},
+    -- },
 }
